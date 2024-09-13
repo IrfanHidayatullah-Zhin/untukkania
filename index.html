@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maafin aku, Kania</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+        h1 {
+            color: #ff6b6b;
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #333;
+        }
+        .gif-container {
+            margin: 20px 0;
+        }
+        .gif-container img {
+            width: 50%;
+            border-radius: 10px;
+        }
+        .button {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #ff5252;
+        }
+
+        /* Styles for the popup modal */
+        .modal {
+            display: none; /* Tersembunyi pada awalnya */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi transparan */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: pop 0.3s ease-out; /* Animasi muncul */
+            max-width: 600px; /* Perbesar ukuran modal */
+        }
+
+        .modal-content img {
+            width: 300px; /* Perbesar ukuran gambar */
+            border-radius: 10px;
+        }
+
+        @keyframes pop {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .close-button {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            display: inline-block;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .close-button:hover {
+            background-color: #ff5252;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Maafin Aku, Kania</h1>
+        <div class="gif-container">
+            <img src="sad-sad-cat.gif" alt="GIF untuk Kania">
+        </div>
+        <p>Ayaanggg maafin aku yang kemarin yaaa, aku janji akan selalu berusaha untuk memperbaiki semuanyaa. Akuu sayangg bangett sama kamuu banget, Kania. Tolong kalo kamu maafin aku kamu pencet tombol "peluk dari jauh" nya yaa</p>
+        <a href="javascript:void(0)" class="button" onclick="showModal()">Peluk dari jauh</a>
+    </div>
+
+    <!-- Modal pop-up untuk animasi pelukan kucing -->
+    <div id="hugModal" class="modal">
+        <div class="modal-content">
+            <img src="kiss.gif" alt="Animasi pelukan kucing">
+            <p>makasih yaa ayanggg udh mau pelukk akuu❤️</p>
+            <a class="close-button" onclick="hideModal()">Tutup</a>
+        </div>
+    </div>
+
+    <script>
+        // Menampilkan modal
+        function showModal() {
+            document.getElementById('hugModal').style.display = 'flex';
+        }
+
+        // Menyembunyikan modal
+        function hideModal() {
+            document.getElementById('hugModal').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
